@@ -1,4 +1,4 @@
-﻿# Auth-API-Firebase
+﻿# Auth API Firebase for Laravel
 ## Instalisasi
 
 Paket ini berfungsi untuk Laravel 5.8 keatas
