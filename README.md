@@ -42,8 +42,14 @@ Route::group(['prefix' => 'v1', 'middleware' => 'authfirebase'], function(){ // 
     });
 });
 ```
-untuk memanggil nya
+untuk memanggil nya sperti dibawah ini, Contoh :
 
 ### localhost/api/v1/makanans/me
 or
 ### localhost/api/v1/minumans/me
+
+Untuk mengakses API gunakan Headers
+#### Authorization:Bearer tokenmu
+
+Contoh :
+#### Authorization:Bearer eyJhb...
