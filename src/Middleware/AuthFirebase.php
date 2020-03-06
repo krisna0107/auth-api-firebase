@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace krisna0107\AuthAPIFirebase\Middleware;
 
 use Closure;
 use Kreait\Firebase\JWT\Error\IdTokenVerificationFailed;
@@ -41,7 +41,7 @@ class AuthFirebase
 
     public function user($token)
     {
-        $verifier = IdTokenVerifier::createWithProjectId("project-id-name");
+        $verifier = IdTokenVerifier::createWithProjectId(config('firebase.project_id'));
         try {
             $token = $verifier->verifyIdToken($token);
             return true;

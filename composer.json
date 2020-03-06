@@ -1,0 +1,38 @@
+{
+    "name": "krisna0107/Auth-API-Firebase",
+    "type": "library",
+    "description": "Simple secure your laravel API with Firebase Auth",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yohanes Krisna Yana Javista",
+            "email": "krisnayanajavista@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0",
+        "kreait/firebase-tokens": "^1.9",
+        "illuminate/support": "^5.7",
+        "illuminate/contracts": "^5.7"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "krisna0107\\AuthAPIFirebase\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "krisna0107\\AuthAPIFirebase\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "krisna0107\\AuthAPIFirebase\\FirebaseAuthProvider"
+            ]
+        }
+    }
+}
