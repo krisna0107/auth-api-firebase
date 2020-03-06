@@ -1,5 +1,5 @@
 {
-    "name": "krisna0107/Auth-API-Firebase",
+    "name": "krisna0107/auth-api-firebase",
     "type": "library",
     "description": "Simple secure your laravel API with Firebase Auth",
     "license": "MIT",
