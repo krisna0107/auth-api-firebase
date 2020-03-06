@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.0",
-        "kreait/firebase-tokens": "^1.9",
+        "kreait/firebase-tokens": "^1.7",
         "illuminate/contracts": "^5.7|^6.0|^7.0",
         "illuminate/support": "^5.7|^6.0|^7.0"
     },
