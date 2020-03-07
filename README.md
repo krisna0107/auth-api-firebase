@@ -1,4 +1,4 @@
-﻿# Auth API Firebase for Laravel
+﻿# Auth Firebase untuk Laravel API
 ## Instalisasi
 
 Paket ini berfungsi untuk Laravel 5.8 keatas
@@ -10,7 +10,7 @@ composer require krisna0107/auth-api-firebase
 
 Publish paket dengan perintah
 ```bash
-php artisan vendor:publish --provider="krisna0107\AuthAPIFirebase\FirebaseAuthProvider" --tag=config
+php artisan vendor:publish --provider="krisna0107\AuthAPIFirebase\FirebaseAuthProvider"
 ```
 Selanjutnya buka file .env dan tambahkan konfigurasi project id nya
 ```bash
@@ -31,7 +31,7 @@ protected $routeMiddleware = [
 ## Pemakaian
 Buke file routes/api.php lalu buat middlewareGroup untuk membungkus API dengan Auth firebase
 ```php
-Route::group(['prefix' => 'v1', 'middleware' => 'authfirebase'], function(){ // v1 ini routeGroup untuk membungkus Api dengan Auth firebase
+Route::group(['prefix' => 'v1', 'middleware' => 'authfirebase'], function(){ // prefix v1 ini routeGroup untuk membungkus Api dengan Auth firebase
     Route::group(['prefix' => 'makanans'], function () {
         Route::get('/me', function () {
             return 'Hello ini route makanan';
@@ -39,20 +39,29 @@ Route::group(['prefix' => 'v1', 'middleware' => 'authfirebase'], function(){ // 
     });
 
     Route::group(['prefix' => 'minumans'], function(){
-        Route::get('foo', function () {
+        Route::get('/me', function () {
             return 'Hello ini route minuman';
         });
     });
 });
 ```
-untuk memanggil nya sperti dibawah ini, Contoh :
+untuk mengakses API gunakan Headers Authorization Bearer
+```bash
+{
+    Authorization:Bearer tokenmu
+}    
+```
 
-### localhost/api/v1/makanans/me
-or
-### localhost/api/v1/minumans/me
-
-Untuk mengakses API gunakan Headers
-#### Authorization:Bearer tokenmu
-
-Contoh :
-#### Authorization:Bearer eyJhb...
+Contoh : 
+```json
+localhost/api/v1/makanans/me
+{
+    "Authorization":"Bearer eyJhb..."
+}
+```
+```json
+localhost/api/v1/makanans/me
+{
+    "Authorization":"Bearer eyJhb..."
+}
+```
