@@ -1,7 +1,7 @@
 ﻿# Auth Firebase untuk Laravel API
 ## Instalisasi
 
-Paket ini berfungsi untuk Laravel 5.8 keatas
+Paket ini berfungsi untuk Laravel 6.0 keatas
 ```bash
 composer require krisna0107/auth-api-firebase
 ```
@@ -18,13 +18,13 @@ FIREBASE_PROJECT_ID=NAMA_PROJECT_ID_MU
 ```
 Terakhir Buka file App/Http/Kernel.php dan tambahkan kode pada $routeMiddleware dibawah ini
 ```php
-'authfirebase' => \krisna0107\\AuthAPIFirebase\AuthFirebase::class,
+'authfirebase' => \krisna0107\AuthAPIFirebase\Middleware\AuthFirebase::class,
 ```
 Contoh :
 ```php
 protected $routeMiddleware = [
     ...
-    'authfirebase' => \krisna0107\\AuthAPIFirebase\AuthFirebase::class,
+    'authfirebase' => \krisna0107\AuthAPIFirebase\Middleware\AuthFirebase::class,
 ];
 ```
 
