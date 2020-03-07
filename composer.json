@@ -13,8 +13,8 @@
     "require": {
         "php": ">=7.0",
         "kreait/firebase-tokens": "^1.10",
-        "illuminate/support": "^5.7",
-        "illuminate/contracts": "^5.7"
+        "illuminate/support": "^5.7|^6.0|^7.0",
+        "illuminate/contracts": "^5.7|^6.0|^7.0"
     },
     "require-dev": {
     },
